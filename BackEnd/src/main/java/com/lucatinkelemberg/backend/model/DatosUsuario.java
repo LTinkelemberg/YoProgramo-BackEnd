@@ -1,5 +1,7 @@
 package com.lucatinkelemberg.backend.model;
 
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,16 +17,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 
-public class DatosPersonales {
+public class DatosUsuario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Integer idPersona;
-    String nombre;
-    String apellido;
-    String lugarDeResidencia;
+    Integer idUsuario;
     String email;
-    String cuentaLinkedin;
-    String aboutMe;    
+    String password;
+      
 }
 
 

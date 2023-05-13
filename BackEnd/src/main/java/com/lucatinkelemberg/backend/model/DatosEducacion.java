@@ -1,30 +1,27 @@
 package com.lucatinkelemberg.backend.model;
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
+@Table 
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-
-public class DatosPersonales {
+@Builder
+public class DatosEducacion {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Integer idPersona;
-    String nombre;
-    String apellido;
-    String lugarDeResidencia;
-    String email;
-    String cuentaLinkedin;
-    String aboutMe;    
+    Integer idEducacion;
+    @Basic
+    String educacion_institucion;
+    String educacion_periodo;
 }
-
-
